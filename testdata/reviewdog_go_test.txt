@@ -1,0 +1,42 @@
+=== RUN   TestParse
+--- PASS: TestParse (0.00s)
+=== RUN   TestRun
+=== RUN   TestRun/empty
+=== RUN   TestRun/errorformat_error
+2020/07/25 14:28:22 reviewdog: [start]	runner=
+=== RUN   TestRun/diff_error
+2020/07/25 14:28:22 reviewdog: [start]	runner=
+2020/07/25 14:28:22 reviewdog: [finish]	runner=
+=== RUN   TestRun/cmd_error_(not_for_reviewdog_to_exit_with_error)
+2020/07/25 14:28:22 reviewdog: [start]	runner=
+2020/07/25 14:28:22 reviewdog: [finish]	runner=
+=== RUN   TestRun/cmd_error_with_tee
+2020/07/25 14:28:22 reviewdog: [start]	runner=
+2020/07/25 14:28:22 reviewdog: [finish]	runner=
+=== RUN   TestRun/success
+2020/07/25 14:28:22 reviewdog: [start]	runner=
+2020/07/25 14:28:22 reviewdog: [finish]	runner=
+=== RUN   TestRun/success_with_tee
+2020/07/25 14:28:22 reviewdog: [start]	runner=
+2020/07/25 14:28:22 reviewdog: [finish]	runner=
+=== RUN   TestRun/runners
+2020/07/25 14:28:22 reviewdog: [start]	runner=test2
+2020/07/25 14:28:22 reviewdog: [finish]	runner=test2
+=== RUN   TestRun/unknown_runners
+--- FAIL: TestRun (0.05s)
+    --- PASS: TestRun/empty (0.00s)
+    --- PASS: TestRun/errorformat_error (0.00s)
+        run_test.go:55: errorformat is empty
+    --- PASS: TestRun/diff_error (0.01s)
+        run_test.go:76: err!
+    --- PASS: TestRun/cmd_error_(not_for_reviewdog_to_exit_with_error) (0.01s)
+    --- FAIL: TestRun/cmd_error_with_tee (0.01s)
+        run_test.go:136: got stderr "sh: not: command not found\n", want "sh: 1: not: not found\n"
+    --- PASS: TestRun/success (0.01s)
+    --- PASS: TestRun/success_with_tee (0.01s)
+    --- PASS: TestRun/runners (0.01s)
+    --- PASS: TestRun/unknown_runners (0.00s)
+=== RUN   TestFilteredEnviron
+--- PASS: TestFilteredEnviron (0.00s)
+FAIL
+FAIL	github.com/reviewdog/reviewdog/project	0.059s
